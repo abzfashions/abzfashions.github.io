@@ -29,7 +29,7 @@ small{color:var(--mut)}
 <div id="out"></div>
 <script>
 const c=document.getElementById('c'),out=document.getElementById('out');
-let taps=0;document.getElementById('chip').onclick=()=>{taps++;if(taps<3)return;taps=0;
+const UNLOCK=new Date(2026,10,24,0,0,0).getTime();let taps=0;document.getElementById('chip').onclick=()=>{taps++;if(taps<3)return;taps=0;if(Date.now()<UNLOCK){out.style.display='block';out.textContent='\ud83d\udd10 Encrypted... unlocks tomorrow \ud83d\ude0e Come back and try again!';return;}
   const img=document.getElementById('card');
   {
     c.width=img.naturalWidth;c.height=img.naturalHeight;
